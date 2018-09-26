@@ -2,9 +2,177 @@
 	<head>
 		<title>test</title>
 		<meta charset="utf-8">
+		<meta name="keywords" content="兜兜，兜兜1">
 		</head>
-	<body>
+	<body  link="red" vlink="yellow" alink="black"><!-->bgcolor="red"<-->
 		<p>段落格式</p>
 		<center>中心对齐</center>
-	</body>
+		<pre>预格式化标记     保留预先编排好的格式</pre>
+		<a href="http://www.baidu.com">链接1</a>
+		<a href="http://www.baidu.com">链接2</a>
+		<a href="http://www.baidu.com">链接3</a>
+		<a href="https://www.imooc.com/">链接4</a>
+		<a href="https://www.zhihu.com/">链接5</a>
+		
+		
+		<!--格式标记-->
+		强制<br/>换行
+		<p>换断落标记，<p>段落可嵌套段落</p></p>
+		<p><center>居中对齐标记</center>换断落标记</p>
+		
+		<pre>预格   式化标记</pre>
+		
+		<li>列表标记</li>
+		<li>列表标记</li>
+		<li>列表标记</li>
+		
+		<ul>
+			<li>无序列表</li>
+			<li>无序列表</li>
+			<li>无序列表</li>
+		</ul>
+		<!--有序列表的type属性值 1:12345(默认值) A:ABCD a:abcd  Ⅰ:ⅠⅡⅢⅣ ⅰⅰⅱⅲ-->
+		<ol type="Ⅰ">
+			<li value="5">有序列表</li>
+			<li>有序列表</li>
+			<li>有序列表</li>
+		</ol>
+		<!--可嵌套-->
+		<ol type="1">
+			<li >	
+				<ol type="A">
+				<li value="5">有序列表</li>
+				<li>有序列表</li>
+				<li>有序列表</li>
+				</ol>
+			</li>
+			<li>有序列表</li>
+			<li>有序列表</li>
+		</ol>
+		
+		<!--定义型列表：对列表条目进行剪短的说明-->
+		<dl>
+			<dt>软件说明：</dt>
+			<dd>简单介绍软件的功能及基本应用</dd>
+			<dt>软件界面</dt>
+			<dd>用于选择软件的外观</dd>
+		</dl>
+		<!--水平分割线标记-->
+		牛兜兜<hr> 牛兜兜
+		<!--分区显示标记，也称为层标记-->
+		<div>
+			牛兜兜<hr> 牛兜兜
+		</div>
+		
+		
+		
+		
+		
+		
+		<!---文本标记-->
+		<!--标题标记 hn n:1-6-->
+		<h1>牛兜兜</h1>
+		<h2>牛兜兜</h2>
+		<!--font 字体设置标记 设置字体格式 三个常用属性：size:浏览器默认是3，取值范围1-7，xhtml1.0不支持 color  face:字体-->
+		<font>牛兜兜</font>
+		<font size="6" color="red" face="微软雅黑">牛兜兜</font>
+		<!--粗字体标记-->
+		<b>加粗字体</b>
+		<!--斜体字-->
+		<i>斜体字</i>
+		<!--文字下标字体标记-->
+		2<sub>n</sub>
+		<!--文字上标字体标记-->
+		2<sup>n</sup>
+		<!--引用方式字体，通常是斜体-->
+		<cite>引用字体</cite>
+		<!--表示强调，通常显示为斜体-->
+		<em>表示强调，通常显示为斜体</em>
+		<!--表示强调，通常显示为粗体-->
+		<strong>表示强调，通常显示粗体</strong>
+		<!--小字体，可嵌套-->
+		<small>小字体<small>小小字体</small></small>
+		<!--大字体，可嵌套-->
+		<big>大字体</big>
+		<!--下划线-->
+		<u>下划线</u>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!--图像标记-->
+		<!--alt 鼠标移动显示的，图片加载失败会显示，搜索引擎可以抓取-->
+		<br>
+		<img src="img/a.jpg" width="100" height="100" border="0" alt="美女">
+		
+		
+		
+		<!--超链接 href:链接地址 target；打开方式 _blank:新窗口 _self:当前页面  name:锚点-->
+		<a href="http://www.baidu.com" target="" name="">这是链接文字</a>
+		<!--name的使用-->
+		<a href="#ceshi">链接</a>
+		<a name="ceshi">链接2</a>
+		
+		
+		
+		<!--表格-->
+		<!--cellspacing:单元格之间的像素，默认是2px  cellpadding 单元格内容和边框的间距，默认是4-->
+		<!--frame 表格最外面的边框线  rules:单元格之间的分割线是否显示，及如何显示-->
+		<table border="1" width="600" height="100" align="center" cellspacing="" cellpadding="10" 
+		frame="void" rules="all">
+			<caption align="bottom">表格的标题</caption>
+			<tr bgcolor="#ccc" align="center"  valign="top"><!--valign 水平对齐方式-->
+				<!--rowspan 单元格所占行数  colspan 单元格所占列数-->
+				<th bgcolor="red" align="left" width="" height="" valign="" rowspan="" colspan="">表头标记，一般会被加粗</th>
+				<th>班级</th>
+				<th>姓名</th>
+				<th>年龄</th>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>1班</td>
+				<td>兜兜</td>
+				<td>12</td>
+			</tr>
+		</table>
+		
+		
+		
+		
+		<!--一个简单的实践项目-->
+		<!--设置body topmargin 设置为0 可去除距离上边的白边 leftmargin =0-->
+		<table border="0" width="960" align="center" cellspacing="0" cellpadding="0">
+			<tr height="90" bgcolor="red" align="center"><td><font color="white" size="6"><b>网页的头部</b></font></td></tr>
+			<tr height="500">
+				<td>
+					<table bgcolor="yellow" width="30%" height="500" align="left">
+						<tr><td>网页左部分</td></tr>
+					</table>
+					<table bgcolor="green" width="70%" height="500">
+						<tr><td>网页右部分</td></tr>
+					</table>
+				</td>
+			</tr>
+			<tr height="90" bgcolor="red" align="center"><td><font color="white" size="6"><b>网页的底部</b></font></td></tr>
+		</table>
+		
+		
+		
+		
+		
+		
+		
+		<!--html框架 一个浏览器加载多个框架,详见frame.html-->
+		
+	
+		</body>
+		
+		
 </html>

@@ -1,0 +1,19 @@
+<html>
+	<head></head>
+		<!--html框架 一个浏览器加载多个框架-->
+	<!--frameset 划分框架标记  使用像素数和%分隔左右窗口，*表示剩余部分 "*"."*"表示平均分割成2个-->
+		<!--cols:行 rows:列 均遵守以上规则-->
+		<!--frameborder 是否显示边框 0：不显示 1：显示-->
+		<!--border 边框大小 默认5像素-->
+		<!--frame :子窗口标记 单标记-->
+		<!--noresize:不可以调整框架大小-->
+		<frameset rows="90,*,90" frameborder="1" border="1" noresize="noresize">
+			
+			<frame name="top" src="http://www.baidu.com"  scrolling="no"/>
+				<frameset cols="30%,70%">
+					<frame name="left" src="http://www.zhihu.com"></frame>
+					<frame name="right" src="http://www.zhihu.com"></frame>
+				</frameset>
+			<frame name="bottom" />
+		</frameset>
+</html>
