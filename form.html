@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>表单内容</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<!--method为get时，表单信息跟在action值后面拼接传递，为post时，不显示在url中-->
+		<form action="1.html" method="post">
+			<!--size 设置控件长度  maxlength:设置允许输入的最大字符长度-->
+			账号：<input type="text" name="username" value="" size="10" maxlength="">
+			<br>
+			<br>
+			密码：<input type="password" name="password">
+			<br>
+			<br>
+			<!--input type submit:提交 reset:重置 button:普通按钮-->
+			<input type="submit " value="提交">
+			<br>
+			<br>
+			<!--单选按钮 checked：默认的选中状态-->
+			性别：<input type="radio" name="sex" checked>男<input type="radio" name="sex">女
+			<br>
+			<br>
+			<!--复选按钮 checked：默认的选中状态-->
+			爱好：<input type="checkbox" checked>唱歌<input type="checkbox">跳舞
+			
+			<br>
+			<br>
+			<!--隐藏-->
+			<input type="hidden" value="隐藏">
+			<br>
+			<br>
+			<!--文本域 cols:定义列数 rows:定义行数-->
+			自我介绍：
+			<textarea cols="35" rows="10" name="introduce">
+			这里是默认值的显示
+			</textarea>
+			<br>
+			<br>
+			<!--菜单下拉列表 multiple:多选按钮  value用于表单传值-->
+			地址：
+			<select name="address" multiple>
+				<option value="四川">四川</option>
+				<option value="北京">北京</option>
+				<option value="上海">上海</option>
+				<option value="石家庄" selected>石家庄</option>
+			</select>
+		</form>
+
+	</body>
+</html>

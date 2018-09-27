@@ -1,0 +1,110 @@
+
+<!--DOCTYPE 必须是html文档的第一行，位于<html>标签之前，是知识web浏览器使用那个html版本进行编写的指令-->
+<!--在html4.01中，<!doctype>声明引用DTD,因为html4.01基于SGML.html5不基于SGML,所以不需要引用DTD-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!--css选择器-->
+		<!--标签选择器-->
+		<!--class选择器-->
+		<!--子类选择器-->
+		<!--id选择器-->
+		<!--组合选择器-->
+		<!--优先级：ID>class>标签-->
+		<!--同级时选择离元素最近的一个的-->
+		<!--伪元素选择器 a:link  a:hover a:active a:visited-->
+		<style type="text/css">
+			/*注释使用*/
+			/*
+			h1{					
+				color:white;
+				size：18
+			}
+			.aa{
+				color:red;
+			}
+			.aa,h2{
+				color:white;
+			}
+			#cs{
+				color:red;
+			} 
+			
+			h3,h4{
+				color:white;
+			}
+			a:link{
+				color:white;
+			}*/
+			/*常见字体css属性*/
+			/*color:red color:#ff6600 color:#f60 color:rgb(255,0,0) rgb取值0-255 color:rgba(255,0,0,0~1)最后一个值为透明度0：为透明不显示*/
+			/*字体样式 font-size:40px font-size:100% 百分比：根据父元素的大小进行百分比  smaller:比父元素更小 larger：比父元素大 inherit:继承父元素大小*/
+			/*定义字体  font-family:'微软雅黑'，'serif' 确保字体不存在时直接使用下一个*/
+			/*字体加粗 font-weight:normal(默认值400) bold(粗)700，bolder(更粗)，lighter(更细) 取值100-900整百数*/
+			/*字体样式 font-style  normal(正常) italic(斜体) oblique(倾斜) inherit(继承父元素) */
+			/*小型大写字母font-variant: normal  small-caps(小型大写字母) inherit(继承)*/
+			
+			/*背景颜色css属性*/
+			/*背景颜色：background-color*/
+			/*背景图片 background-image:url("")*/
+			/*背景重复 bacground-repeat repeat:重复平铺满 repeat-x:向x轴重复 repeat-y:向y轴重复 no-repeat 不重复*/
+			/*背景位置 background-position top  bottom left居中向左对齐 right居中向右对齐 center正中间 20px */
+			/*简写方式 background:#f60 url("img/a,jpg") no-repeat left*/
+			/*body{
+				background-image:url(img/a.jpg);
+				background-repeat:no-repeat;
+				background-position:left center 有两个值，一个x值，一个y值 不写默认center
+			
+			background:#f00 url("img/a.jpg") no-repeat left;
+			}*/
+			
+			/*字体样式*/
+			/*text-align left right center*/
+			/*line-height 行高 px  % 百分比：基于自身字体大小*/
+			/*text-indent:首行缩进  % ：容器的百分比  px inherit :继承父元素*/
+			/*字符间距 letter-spacing px normal -20px:会重复 inherit:继承*/
+			/*单词间距 word-spacing normal px inherit:继承*/
+			/*显示方向 direction ltr  rtl inherit*/
+			/*文本大小写:针对于单词  text-transform capitalize:每个单词第一个字母大写  uppercase :全部大写 lowercase:全部小写  inherit */
+			div{
+				width:200px;
+				height:200px;
+				border:1px solid;
+			}
+			#f{
+				/*text-align:center;*/
+				font-size:20px;
+				line-height:200%;
+				color:red;
+				text-indent:50%;
+				letter-spacing:-5px;
+				direction:rtl;
+				
+			}
+			#ma{
+				word-spacing:10px;
+				color:red;
+				text-transform:uppercase
+			}
+		</style> 
+	</head>
+	<!--使用css的方式-->
+	<!---内联样式表 body  style="background-color:green;"-->
+	<!--嵌入式样式表 <style type="text/css"></style>-->
+	<!--引入式样式表 <link rel="stylesheet" type="text/css" href="style.css">-->
+	<body >
+		<h1 class="aa">css使用方式</h1>
+		<p>引入式样式表</p>
+		<h2>嵌套式样式</h2>
+		<p id="cs">id选择器</p>
+		<h3>组合选择器1</h3>
+		<h4>组合选择器</h4>
+		<a href="http://www.baidu.com/ddd" target="_blank">链接</a>
+		<div><p id="f">字体样式</p>
+		<p id="ma">ma zi  </p>
+		</div>
+		
+	</body>
+</html>
