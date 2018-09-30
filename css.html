@@ -68,9 +68,23 @@
 			/*单词间距 word-spacing normal px inherit:继承*/
 			/*显示方向 direction ltr  rtl inherit*/
 			/*文本大小写:针对于单词  text-transform capitalize:每个单词第一个字母大写  uppercase :全部大写 lowercase:全部小写  inherit */
+			
+			
+			
+			/*边框样式*/
+			/*边框样式 border-style none solid:直线边框 dashed:虚线 dotted:点状边框 double:双线边框*/
+			/*依托border-color的边框样式 groove 凸槽边框 ridge 垄状边框 inset inset边框 outset outset边框 inherit继承*/
+			/*单独定义某一方向的边框样式  border-bottom-style border-top-style border-left-style border-right-style*/
+			/*边框宽度 border-width border-bottom-width border-top-width border-left-width border-right-width*/
+			/*取值 thin medium thick(粗边框) px inherit*/
+			/*边框颜色 border-color border-bottom-color ....*/
+			/*red #ff6600 #f60 rgb rgba*/
+			/*四种情况：border-color  (一个值：上下左右同一一个颜色) (上下，左右)(上，左右，下)(上，右，下，左)*/
+			/*简写方式 border:solid 2px #f60*/
 			div{
 				width:200px;
 				height:200px;
+				background-color:#f60;
 				border:1px solid;
 			}
 			#f{
@@ -88,7 +102,18 @@
 				color:red;
 				text-transform:uppercase
 			}
-		</style> 
+			
+			
+			/*列表样式*/
+			/*标记类型 list-style-type none  disc:实心圆（默认）circle:标记是空心圆 */
+			/*square:实心方块  decimal:标记是数字 decimal-leading-zero 0开头的数字标记 01 0203*/
+			/*lower-roman小写罗马数字i upper-roman大写罗马数字I  lower-alpha 小写英文字母 upper-alpha大写英文字母 */
+			/*lower-greek 小写希腊字母 lower-latin 小写拉丁字母 upper-latin*/
+			/*....*/
+			/*list-style-position inside:放到文本以内 outside inherit*/
+			/*list-style-image:url("") none inherit*/
+			/*简写list-style :square inside url("") 图片不存在时，用编辑类型代替*/
+			</style> 
 	</head>
 	<!--使用css的方式-->
 	<!---内联样式表 body  style="background-color:green;"-->
@@ -105,6 +130,22 @@
 		<div><p id="f">字体样式</p>
 		<p id="ma">ma zi  </p>
 		</div>
+		<br>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
 		
+		
+		<ol>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ol>
 	</body>
 </html>
