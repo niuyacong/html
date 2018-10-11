@@ -3,10 +3,10 @@
 		<title>div+css布局</title>
 		<meta charset="utf-8">
 		<style>
-		div{
+		/*div{
 			background-color:red;
 			padding:10px
-		}
+		}*/
 		span{
 		
 			background-color:red;
@@ -18,13 +18,160 @@
 			border:solid 10px;
 			padding:0
 		}
+		
+		
+		.div{
+		
+			width:600px;
+			height:600px;
+			background-color:green;
+			/*居中对齐*/
+			margin:0 auto
+		}
+		.diva{
+			float:left;
+			width:240px;
+			height:240px;
+			background-color:red
+		}
+		.divb{
+			float:left;
+			width:240px;
+			height:240px;
+			background-color:yellow
+		}
+		/*第二个div容器的大小不包括margin,但包括padding和border值，但都会影响div的所占位置*/
+		.div div{
+			padding:10px ;
+			margin:10px;
+			border:solid 10px
+		}
+		
+		
+		/*定位*/
+		/*relative:正常定位*/
+		
+		.position{
+			width:300px;
+			height:300px;
+			background-color:red;
+			position:relative;
+			/*根据已有位置进行定位*/
+			left:0;
+			top:10px;
+		}
+		/*absolute 根据父元素定位  父元素必须是relative*/
+		.position span{
+			position:absolute;
+			background-color:green;
+			color:white;
+			/*距离父元素的位置*/
+			left:0;
+			top:-10px
+		}
+		/*fixed 相对于浏览器窗口进行浮动*/
+		.fixed{
+			position:fixed;
+			background-color:#fff000;
+			color:white;
+			top:100px;
+			left:100px;
+			/*z-index默认为0 层覆盖优先顺序*/
+			z-index:1;
+		}
+		/*inherit继承*/
+		
+		
+		/*display 显示属性*/
+		/*块状元素（div）能定义宽度  而内联样式(span)不能定义宽度*/
+		/*display :none 不显示  block:块状显示 在元素后面换行，显示下一个元素  inline:内联显示，多个块可以显示在一行内*/
+		
+		
+		
+		/*浮动及溢出处理*/
+		.fudong{
+			width:960px;
+			height:960px;
+			margin:0 auto;
+			background-color:#f1f1f1;
+		}
+		.left{
+			float:left;
+			width:260px;
+			height:260px;
+			background-color:red;
+		}
+		.right{
+			float:right;
+			width:690px;
+			height:260px;
+			background-color:green;
+		}
+		.bottom{
+			/*清除浮动的影响 也可以在div间增加div清除浮动*/
+			/*clear:both;*/
+			width:960px;
+			height:260px;
+			background-color:yellow;
+		}
+		
+		
+		/*overflow溢出处理*/
+		/*hidden 隐藏超出层大小的内容*/
+		/*scroll 无论内容是否超出层大小都添加滚动条*/
+		/*auto 超出时自动添加滚动条*/
+		.jianjie{
+			width:200px;
+			height:120px;
+			background-color:blue;
+			color:white;
+			overflow:hidden;
+		}
+		
+		
+		/*ie兼容工具  ie tester ,multibrower  opera*/
+		/*网页设计工具 fireworks,photoshop*/
+		
+		/*判断ie的方法*/
 		</style>
 	</head>
 	<body>
+		<!--[if 条件 版本]>那么现实<![endif]-->
+		<!-- !不等于  lt:小于 gt:大于 lte:小于等于 gte:大于等于 [if (gt ie 5)&(lt IE7)：大于和小于之间]  if(ie 6)|(ie 7):或   [if ie 8]:仅-->
+		<!--[if !ie 9]>这不是ie9<![endif]-->
+		
+		
+		
 		<!--div和span在html标记中，没有任何意义，他们的存在就是为了应用css样式-->
 		<!--div和span的区别在于，span是内联元素，div是块级元素-->
-		
+		<!--盒子模型 从外到内  margin  border padding-->
 		<div>兜兜</div>
 		<span>兜兜</span>
+		
+		<div class="div">
+			<div class="diva"></div>
+			<div class="divb"></div>
+		</div>
+		
+		<!--定位方式 position-->
+		<!--relative:正常定位-->
+		<div class="position">
+			<span>浏览次数：33</span>
+		</div>
+		
+		<div class="fixed">
+			<p>联系方式：xxxxx</p>
+		</div>
+		
+		
+		/*浮动以及溢出处理*/
+		<div class="fudong">
+			<div class="left">
+				<div class="jianjie">ddddddd简介ddddddd简介ddddddd简介ddddddd简介ddddddd简介ddddddd简介ddddddd简介ddddddd简介ddddddd简介ddddddd简介ddddddd简介</div>
+			</div>
+			<div class="right"></div>
+			<div style="clear:both;"></div>
+			<div class="bottom"></div>
+		</div>
 	</body>
 </html>
