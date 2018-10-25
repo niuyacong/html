@@ -259,7 +259,12 @@ ul li.a, .nav li:hover{
 .footer_bottom a:hover{
 	color:#f60
 }
-
+.footer_f ul{
+	position:fixed;
+	top:500px;
+	right:40px;
+	
+}
 
 
 
