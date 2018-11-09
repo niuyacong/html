@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <!--
+        video元素：html5中专门用来播放网络上的视频或者电影
+        audio元素：html5中专门用来播放网络上的音频
+        用法:
+        <audio src="mp3.mp3" controls="controls">您的浏览器不支持audio</audio>
+        <video src="mp3.mp3" controls="controls" width="500" height="200">您的浏览器不支持video</video>
+        source元素可以为同一媒体数据制定不同格式，编码，确保浏览器自上而下选择合适的播放格式
+        <video>
+            <source src="1.m4v" type="video/mp4">
+            <source src="1.webm" type="video/webm">
+            <source src="1.mp4" >
+        </video>
+        1、autoplay="autoplay" 是否当王爷加载完之后开始自动播放，属性两个元素都有
+        2、preload属性 是否对数据进行预加载，是的话，浏览器会将视频数据或者音频数据进行缓冲，加快播放的速度
+            none:不进行预加载
+            metadata:表示只预加载媒体的元数据
+            auto(默认)：表示预加载全部的视频或者音频
+        3、poster属性，video元素独有的，当视频不可播放时，向用户展示一张图片
+        4、loop="loop" 是否循环播放音频或视频文件
+    -->
+
+</body>
+</html>

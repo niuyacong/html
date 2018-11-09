@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>css3</title>
+    <style>
+        [id*=section]{
+            background: green;
+        }
+        [id$="1"]{
+            background: red;
+        }
+        /*链接符 - 需加上\ 转义*/
+        [id$=\-1]{
+            background: yellow;
+        }
+        /*类选择器*/
+        p.left{
+            text-align: left;
+            color: red;
+        }
+        p.right{
+            text-align: right;
+            color: green;
+        }
+        /*伪类选择器*/
+        a:link{
+            color: #000;
+        }
+        a:visited{
+            color: green;
+        }
+       /*注意hover和active的先后顺序*/
+        a:hover{
+            color: #f60;
+        }
+        a:active{
+            color: red;
+        }
+
+        .line:first-line{
+            color: red;
+        }
+        .line:first-letter{
+            color: green;
+        }
+
+        li{
+            list-style: none;
+        }
+        li:before{
+            content: "。。。。。";
+            color: deepskyblue;
+        }
+
+        /*根选择器*/
+        :root{
+            background: #D2D2D2;
+        }
+        body *:not(a){
+            background: white;
+        }
+        :empty{
+            background: #ff6600;
+        }
+        /*target元素选择器*/
+        :target{
+            background: #77ff33;
+            color: #fcff32;
+        }
+
+        /*兄弟元素*/
+        div~p{
+            color: #ff93fb;
+        }
+    </style>
+    <script type="text/javascript">
+
+    </script>
+</head>
+<body>
+    <!--css3的属性选择器
+            1、[att*=val] 如果元素用att表示的属性值中包含用val指定的字符，那么该元素使用这个样式
+            2、[att^=val]如果用att表示的属性的属性值的开头字符用val指定字符的话，那么。。。
+            3、[att$=val]如果元素用att表示的属性的属性值的结尾为val,那么。。
+    -->
+    <h1>css3中的属性选择器</h1>
+    <div id="section1">section1</div>
+    <div id="section1-1">section1-1</div>
+    <div id="section1-1-1">section1-1-1</div>
+    <div id="section1-2">section1-2</div>
+    <div id="section1-2-1">section1-2-1</div>
+    <!--伪类选择器和伪元素-->
+    <h1>类选择器</h1>
+    <p class="left">伪类选择器以及伪元素</p>
+    <p class="right">伪类选择器以及伪元素</p>
+    <br/>
+    <!--伪类选择器
+            1、first-line 用于向某个元素中的第一行文字使用样式
+            2、first-letter 用于向某个元素中的文字的首字母或第一个字使用样式
+            3、before 用于在某个元素之前插入一些内容
+            4、after 用于在某个元素之后插入一些内容
+            5、root选择器 将样式绑定到页面的根元素中
+            6、not选择器
+            7、empty选择器
+            8、target选择器：对页面中某个target元素指定样式，只有用户点击了超链接并且跳转到target元素后起作用
+            9、first-child 第一个子元素
+            10、last-child最后一个子元素
+            11、nth-child(n)匹配第n个子元素
+            12、nth-child(odd)匹配index为奇数的子元素
+            13、nth-child(even)匹配为偶数的子元素
+            14、nth-last-child(n) 倒数第n个子元素
+            15、nth-last-child(odd)倒数奇数元素
+            16、nth-last-child(even)倒数偶数元素
+            17、交叉出现的元素取值nth-of-type(n) 正数 nth-last-of-type(n)倒数
+            18、循环使用样式：nth-child(An+B)A:表示每次循环中共包含几种样式， B:表示指定样式在循环中所处的位置
+            19、对有且只有一个子元素的起作用 only-child
+    -->
+    <h1>伪类选择器，被css3定义好的</h1>
+    <a href="/">伪类选择器</a>
+    <p class="line">first-line<br/>用于向某个元素中的第一行文字使用样式</p>
+    <ul>
+        <li><a href="/">伪类选择器</a></li>
+        <li><a href="/">伪类选择器</a></li>
+        <li><a href="/">伪类选择器</a></li>
+        <li><a href="/">伪类选择器</a></li>
+
+    </ul>
+    <!--empty选择器-->
+    <p style="width: 500px;height: 200px"></p>
+    <!--target元素选择器-->
+    <a href="#A">跳转到A</a>
+    <a href="#B">跳转到B</a>
+    <div id="A">A的颜色</div>
+    <div id="B">B的颜色</div>
+    <!--nth-of-type(n) h1:nth-of-type(2)-->
+    <div>
+        <h1></h1>
+        <p></p>
+        <h1></h1>
+        <p></p>
+    </div>
+
+    <!--ui元素状态伪类选择器：只有当元素处于某种状态时，才起作用
+            1、：hover  :active :focus :获得焦点时
+            2、:disabled不可用 enabled:可用
+            3、input:read-only 只读  read-white 非只读
+            4、 :checked 指定单选框或者复选框选中的样式
+                :default 指定页面打开时默认处于选取状态的单选框或复选框，只支持火狐浏览器
+                :indeterminate 指定页面打开时，一组单选框中没有任何一个单选框被设定为选中状态时,整组单选框的样式，只支持火狐浏览器
+            5、::selection被鼠标选中的样式
+            6、invalid选择器 无效 valid有效 样式  是否符合html5使用的元素诸如requirde等属性所指定的的检查或元素内容不符合元素规定的格式时的样式
+            7、required选择器 用来指定允许使用required属性，而且已经指定了required属性的input元素,select 元素以及textarea元素的样式（即有required属性）
+                optional选择器 用来指定允许使用required属性，而且未指定了required属性的input元素,select 元素以及textarea元素的样式（即没有required属性）
+            8、in-range 元素的有效值在指定范围内时指定元素样式   min最小有效值  max最大有效值  input type="number"
+                out-of-range 元素输入的值超过了指定范围时的样式
+
+    -->
+
+    <!--
+        通用兄弟选择器
+            1、div~p{} 和div同级的并且位于div后面的p元素样式
+            2、
+    -->
+
+    <div>
+        <p>1</p>
+    </div>
+<p>2</p>
+
+        <!--通过选择器插入内容
+            1、通过before、after插入内容
+            2、通过nocontent 排除一些不需要插入内容的元素
+            3、before after除了可以插入内容之外，还可以填入图片 content:url()
+        -->
+        <h1>通过选择器插入内容</h1>
+        <h2>通过选择器插入内容</h2>
+    <h2 class="noc">通过选择器插入内容</h2>
+    <h2>通过选择器插入内容</h2>
+    <h2>通过选择器插入内容</h2>
+</body>
+</html>
+<style>
+    h2:before{
+        content: 'hahha ';
+    }
+    /*noc类名*/
+    h2.noc:before{
+        content: none;
+    }
+    h1:before{
+        content: url('img/time.jpg');
+        width: 20px;
+        height: 20px;
+    }
+</style>

@@ -3,7 +3,13 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <script type="text/javascript" src="js/canvas.js"></script>
+    <script type="text/javascript" src="js/canvas.js?v=1"></script>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
 </head>
 <body onload="draw('canvas');">
     <!--创建canvas画布-->
@@ -27,6 +33,11 @@
             context.fillRect(x,y,width,height)
             context.strokeRect(x,y,width,height)
         -->
-    <canvas id="canvas" width="500px" height="350px"></canvas>
+    <!--<canvas id="canvas_rect" width="500px" height="350px"></canvas>-->
+
+    <!--<canvas id="canvas_circle" width="500px" height="350px"></canvas>-->
+    <!--<canvas id="canvas_font" width="500px" height="350px"></canvas>-->
+
+    <canvas id="canvas" width="500px" height="500px"></canvas>
 </body>
 </html>

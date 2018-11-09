@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>h5的拖放</title>
+    <script type="text/javascript">
+        function drag(ev){
+//            清除dataTransfer对象的数据
+//            ev.clearData();
+            //设置拖放效果
+            ev.effectAllowed="copy";
+//            使用setData(数据类型,携带的数据)
+//            方法将要拖放的数据存入dataTransfer对象
+            ev.dataTransfer.setData("Text",ev.target.id);
+        }
+        function allowDrop(ev){
+//            不执行默认处理（拒绝被拖放）
+            ev.preventDefault();
+            ev.dataTransfer.dropEffect="copy";
+        }
+        function drop(ev){
+//            不执行默认处理（拒绝被拖放）
+            ev.preventDefault();
+//            使用getData()获取到数据，然后赋值给data
+            var data=ev.dataTransfer.getData("Text");
+//            使用appendChild方法把拖动的节点放到元素节点中成为他的子节点
+            ev.target.appendChild(document.getElementById(data))
+        }
+    </script>
+    <style>
+        #tuo{
+            background: #e54d26;
+            width: 540px;
+            height: 320px;
+        }
+        #cun{
+            width: 540px;
+            height: 320px;
+            border: 2px solid #D2D2D2;
+            box-shadow: 1px 4px 8px #646464;
+        }
+    </style>
+</head>
+<body>
+    <!--拖放时的视觉效果-->
+    <!--effectAllowed属性表示一个元素被拖放时的视觉效果，一般在ondragstart事件中设定-->
+    <!--dropeffect属性表示实际拖放的视觉效果，一般在ondragove事件中制定,允许的值：none copy  link  move-->
+    <!--具体值可参考put.png-->
+    <div id="cun" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <img src="img/time.jpg" id="tuo" draggable="true" ondragstart="drag(event)" width="500" height="300">
+
+</body>
+</html>
