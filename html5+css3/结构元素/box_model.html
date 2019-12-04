@@ -1,0 +1,79 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>盒模型</title>
+	
+	<style>
+
+	/*div.div1{
+		float:left;
+		width:100px;
+		background-color:green;
+	}
+	div.div2{
+		float:left;
+		width:100px;
+		background-color:#ff6600;
+	}
+	div.div3{
+		clear:both;
+		background-color:blue;
+	}*/
+	/*css3可以不使用float和clear  实现相同的效果*/
+	div.div1{
+	display:inline-block;
+		width:100px;
+		background-color:green;
+	}
+	div.div2{
+	vertical-align:top;
+	display:inline-block;
+		width:100px;
+		background-color:#ff6600;
+	}
+	div.div3{
+		background-color:blue;
+	}
+	
+	/*文字和表格的排列效果*/
+	table{
+		display:inline-table;
+		vertical-align:bottom;
+	}
+	td{
+		border:1px solid;
+	}
+	
+	
+	</style>
+</head>
+<body>
+<h1>使用inline-block类型来执行分列显示</h1>
+<div class="div1">
+威廉·莎士比亚（英语：William Shakespeare，1564年4月26日－1616年4月23日），华人社会常尊称为莎翁，清末民初鲁迅在《摩罗诗力说》（1908年2月）称莎翁为“狭斯丕尔”，是英国文学史上最杰出的戏剧家，也是欧洲文艺复兴时期最重要、最伟大的作家，当时人文主义文学的集大成者,以及全世界最卓越的文学家之一。
+莎士比亚在埃文河畔斯特拉特福出生长大，18岁时与安妮·海瑟薇结婚，两人共生育了三个孩子：苏珊娜、双胞胎哈姆尼特和朱迪思。16世纪末到17世纪初的20多年期间莎士比亚在伦敦开始了成功的职业生涯，他不仅是演员、剧作家，还是宫内大臣剧团的合伙人之一，后来改名为国王剧团。1613年左右，莎士比亚退休回到埃文河畔斯特拉特福，3年后逝世。
+</div><div class="div2">
+威廉·莎士比亚（英语：William Shakespeare，1564年4月26日－1616年4月23日），华人社会常尊称为莎翁，清末民初鲁迅在《摩罗诗力说》（1908年2月）称莎翁为“狭斯丕尔”，是英国文学史上最杰出的戏剧家，也是欧洲文艺复兴时期最重要、最伟大的作家，当时人文主义文学的集大成者,以及全世界最卓越的文学家之一。
+
+</div><div class="div3">
+威廉·莎士比亚（英语：William Shakespeare，1564年4月26日－1616年4月23日），华人社会常尊称为莎翁，清末民初鲁迅在《摩罗诗力说》（1908年2月）称莎翁为“狭斯丕尔”，是英国文学史上最杰出的戏剧家，也是欧洲文艺复兴时期最重要、最伟大的作家，当时人文主义文学的集大成者,以及全世界最卓越的文学家之一。
+莎士比亚在埃文河畔斯特拉特福出生长大，18岁时与安妮·海瑟薇结婚，两人共生育了三个孩子：苏珊娜、双胞胎哈姆尼特和朱迪思。16世纪末到17世纪初的20多年期间莎士比亚在伦敦开始了成功的职业生涯，他不仅是演员、剧作家，还是宫内大臣剧团的合伙人之一，后来改名为国王剧团。1613年左右，莎士比亚退休回到埃文河畔斯特拉特福，3年后逝世。
+</div>
+
+
+<h1>inline-table 类型</h1>
+这里是文字
+<table>
+	<tr>
+		<td>1</td><td>2</td><td>3</td>
+	</tr>
+		<tr>
+		<td>1</td><td>2</td><td>3</td>
+	</tr>
+		<tr>
+		<td>1</td><td>2</td><td>3</td>
+	</tr>
+</table>
+这里是文字
+</body>
+</html>

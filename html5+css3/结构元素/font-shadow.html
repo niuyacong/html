@@ -1,0 +1,101 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>服务器端字体</title>
+</head>
+<style>
+	h2{
+	/*如果忽略颜色值，则颜色是继承关系*/
+	/*可以有多个阴影，用逗号分隔*/
+		text-shadow:15px 15px 6px #000,25px 25px 8px red;
+	
+	}
+	/*word-break:break-all 允许在单词内换行*/
+	p{
+	/*word-wrap 属性值有两个*/
+	/*normal 浏览器保持默认处理方式，只在半角空格或是在连字符的地方换行
+	break-word 浏览器可以在长单词或url地址内部进行换行
+	*/
+		word-wrap:break-word;
+	}
+	
+	
+	/*使用之前的知识，标识编号*/
+	h1:before{
+		content:counter(title)'、'
+	}
+	h1{
+		counter-increment:title
+	}
+	@font-face{
+		font-family:webfont;
+		src:url('font/test.ttf')
+	}
+	/*为斜体 粗体定义不同的样式*/
+	@font-face{
+		font-family:webfont;
+		src:url('font/Sansation_Light.ttf');
+		font-weight:bold;
+	}
+	.a{
+		font-family:webfont;
+	}
+	@font-face{
+		font-family:fantasy;
+		src:local('fantasy')
+	}
+	.loc{
+		font-family:fantasy
+	}
+</style>
+<body>
+
+	<h1>text-shadow :length length length color</h1>
+	<h2 class="shadow">text-shadow :length length length color</h2>
+
+	第一个length 表示的是阴影离开文字的横方向距离，
+	第二个length 表示的是阴影离开文字的纵方向距离
+	第三个length 表示的是阴影模糊半径
+	color 表示的是阴影的颜色
+	
+	<h1>文字阴影text-shadow</h1>
+
+	自动换行示例
+	<p>自动换行示例自动换行示例自动换行示例自动换行示例自动换行示例自动，换行示例自动换行示例自动换行示例自动换行自动换行示例自动换行示例自动换行示例自动换行示例自动换行示例自动换行示例自动换行示例自动换行示例自动换行示例自动换行示例自动换行示例自动换行示例自动换行示例自动换行示例自动换行示例示例自动换行示例</p>
+
+	
+	<h1>在页面上显示服务器端的字体</h1>
+	用法 @font-face{
+		font-family:webFont;
+		font-style:italic;/*可以定义斜体或粗体时，使用不同的文字样式*/
+		src:url('font/字体名称.otf')format("opentype")
+		/*字体文件格式*/
+		/*otf  opentype*/
+		/*ttf  truetype*/
+		/*eot  embedded-opentype*/
+	}
+	.font{
+		font-family:webFont;
+	}
+	<h3>With CSS3, websites can <b>finally</b> use fonts other than the pre-selected "web-safe" fonts.</h3>
+	<p class="a">With CSS3, websites can <b>finally</b> use fonts other than the pre-selected "web-safe" fonts.</p>
+	
+	
+	<h1>显示客户端本地字体</h1>
+	@font-face{
+		font-family:Arial;
+		src:local('Arial')
+	}
+	<p>With CSS3, websites can三生三世 </p>
+	<p class="loc">With CSS3, websites can三生三世 </p>
+	
+	<h1>属性值的指定</h1>
+	font-family 设置文本的字体样式
+	font-style 设置文本样式 normal 不使用斜体 oblique 使用倾斜体 inherit 从父元素继承
+	font-variant 设置文本是否大小写 normal使用浏览器默认值 small-caps 使用小型大写字母 inherit 从父元素继承
+	font-weight 设置文本的粗细
+	normal 使用浏览器默认值  bold使用粗体  bolder 使用更粗的字体 lighter使用更细的字体  100=900从细字体到粗，值必须是100的倍数，400==normal 700==bold
+	font-stretch 设置文本是否横向的拉伸变形
+	font-size设置文字大小
+	</body>
+</html>
